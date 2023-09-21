@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Odin-Library</title>
 </head>
 <body>
     <div class="input-page">
         <div class="input-form">
             <div class="form-heading">Add new book</div>
-            <input type="text" name="title" id="title">
-            <input type="text" name="author" id="author">
-            <input type="number" name="page-num" id="page-num">
-            <div class="read-status-container">
-                <label for="read-status">Have you read the book?</label>
-                <input type="checkbox" name="read-status" id="read-status">
-            </div>
-            <button class="card-button">Submit</button>
+            <form action="" class="add-book-form" id="add-book-form">
+                <input type="text" name="title" id="title" placeholder="Title" maxlength="100">
+                <input type="text" name="author" id="author" placeholder="Author" maxlength="100">
+                <input type="number" name="page-num" id="page-num" min="0" placeholder="Page Numbers">
+                <div class="read-status-container">
+                    <label for="read-status">Have you read the book?</label>
+                    <input type="checkbox" name="read-status" id="read-status">
+                </div>
+                <button class="submit-button green-button" type="submit">Submit</button>
+            </form>
         </div>
     </div>
     <div class="header">
@@ -30,8 +32,8 @@
             <div class="title-text">test book</div>
             <div class="author-text">test author</div>
             <div class="page-num-text">test page number</div>
-            <button class="card-button read-button">read</button>
-            <button class="card-button">remove</button>
+            <button class="card-button green-button">Read</button>
+            <button class="card-button">Remove</button>
         </div>
     </div>
 </body>
