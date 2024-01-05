@@ -4,21 +4,21 @@ const inputPage = document.querySelector('.input-page');
 const inputForm = document.querySelector('.input-form');
 const form = document.querySelector('form');
 const canvas = document.querySelector('.main-body');
-const card = document.querySelector('.book-card')
+const card = document.querySelector('.notes-card')
 const readButton = document.querySelector('.read-button')
 const removeButton = document.querySelector('.remove-button');
 
 function addBooks() {
     canvas.replaceChildren();
-    myLibrary.forEach(book => {
-        book.id = myLibrary.indexOf(book);
+    myLibrary.forEach(notes => {
+        notes.id = myLibrary.indexOf(notes);
         const newCard = card.cloneNode(true);
         newCard.style.display = 'grid'
-        newCard.querySelector('#title').textContent = `"${book.title}"`;
-        newCard.querySelector('#author').textContent = `${book.author}`;
-        newCard.querySelector('#pages').textContent = `${book.pages}`;
-        newCard.dataset.id = book.id;
-        if (book.readStatus == "on") {
+        newCard.querySelector('#title').textContent = `"${notes.title}"`;
+        newCard.querySelector('#author').textContent = `${notes.author}`;
+        newCard.querySelector('#pages').textContent = `${notes.pages}`;
+        newCard.dataset.id = notes.id;
+        if (notes.readStatus == "on") {
             newCard.querySelector('.read-button').classList.add('green-button');
             newCard.querySelector('.read-button').textContent = `Read`;
         }
@@ -30,7 +30,7 @@ function addBooks() {
             myLibrary.splice(e.target.parentNode.dataset.id, 1);
             addBooks()
             if (!myLibrary.length) {
-                canvas.innerHTML = `Nothing to show here. Add new books!`
+                canvas.innerHTML = `No notes found. Click New+ to add one!`
             }
         })
         canvas.appendChild(newCard);
@@ -68,5 +68,4 @@ function toggleReadStatus(index, elem) {
 }
 
 if (!myLibrary.length) {
-    canvas.innerHTML = `Nothing to show here. Add new books!`
-}
+    canvas.innerHTML = `No notes found. Click New+ to add one!` }
