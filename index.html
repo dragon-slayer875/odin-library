@@ -5,34 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Odin-Library</title>
+    <title>Tasker</title>
 </head>
 <body>
     <div class="input-page">
         <div class="input-form">
-            <div class="form-heading">Add new book</div>
-            <form class="add-book-form" id="add-book-form">
-                <input type="text" name="title" id="title" placeholder="Title" maxlength="100">
-                <input type="text" name="author" id="author" placeholder="Author" maxlength="100">
-                <input type="number" name="pages" id="pages" min="0" placeholder="Page Numbers">
-                <div class="read-status-container">
-                    <label for="readStatus">Have you read the book?</label>
-                    <input type="checkbox" name="readStatus" id="readStatus">
-                </div>
+            <div class="form-heading">Add new task</div>
+            <form class="add-task-form" id="add-task-form">
+                <input type="text" name="title" id="titleInp" placeholder="Title" maxlength="100">
+                <input type="text" name="description" id="descriptionInp" placeholder="Description" maxlength="100">
+                <input type="date" name="time" id="timeInp" min="0" placeholder="Due Date">
                 <button class="submit-button green-button" type="submit">Submit</button>
             </form>
         </div>
     </div>
     <div class="header">
-        <div class="logo">Library</div>
+        <div class="logo">Tasks</div>
         <button class="header-button">New +</button>
     </div>
     <div class="main-body">
-        <div class="book-card" data-id="">
-            <div id="title">"test book"</div>
-            <div id="author">test author</div>
-            <div id="pages">test page number</div>
-            <button class="read-button">Not read</button>
+        <div class="done-card" data-id="">
+            <div id="title">"test task"</div>
+            <div id="description">test author</div>
+            <div id="time">test page number</div>
+            <button class="done-button">Not Done</button>
             <button class="remove-button">Remove</button>
         </div>
     </div>

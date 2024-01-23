@@ -38,9 +38,9 @@ body {
     box-shadow: 0px 0px 8px rgb(60, 60, 60);
 }
 
-.add-book-form {
+.add-task-form {
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
     gap: 15px;
@@ -50,19 +50,6 @@ body {
 .input-form .form-heading {
     font-weight: 800;
     font-size: 1.4em;
-}
-
-.read-status-container {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-}
-
-input[type='checkbox'] {
-    height: 20px;
-    width: 20px;
-    padding: 0px;
-    accent-color: white;
 }
 
 input[type='text'] ,
@@ -114,7 +101,7 @@ input[type='number'] {
     grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
 }
 
-.book-card {
+.done-card {
     display: none;
     justify-items: center;
     align-items: center;
@@ -128,13 +115,13 @@ input[type='number'] {
     padding: 15px 25px;
 }
 
-.book-card:hover {
+.done-card:hover {
     box-shadow: 0px 2px 1px rgb(69, 69, 139);
 }
 
 .remove-button,
 .submit-button,
-.read-button {
+.done-button {
     font-family: inherit;
     font-weight: 600;
     font-size: 1.1em;
@@ -154,10 +141,10 @@ input[type='number'] {
     background: #90e78d !important;
 }
 
-.read-button {
+.done-button {
     background: #ff9c9c;
 }
 
-.read-button:hover {
+.done-button:hover {
     background: #e78d8d;
 }
